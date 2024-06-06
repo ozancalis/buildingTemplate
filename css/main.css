@@ -1,12 +1,15 @@
-.no-padding {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    padding-top: 1% !important;
-    margin-left: 2% !important;
-    margin-right: 0 !important;
-  }
-
-
+body{
+  color: white; /* Metin rengi */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Metin gölgesi */
+  overflow-x: hidden; /* Scroll kapatma */
+}
+.container{
+  margin-left: 5%;
+  margin-right: 0%;
+}
+#navBar{
+  padding-top:2%;
+}
 .containerBackground {
   width: 100%;
   height: 100vh; /* Tam ekran yüksekliği */
@@ -14,8 +17,9 @@
   background-image: url('/img/822-ic-mekan-tasarimlari.png'); /* Arka plan resmi URL'si */
   background-size: cover; /* Resmin konteynırı kaplamasını sağlar */
   background-position: bottom; /* Resmin altını sabitler */
-  color: white; /* Metin rengi */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Metin gölgesi */
+  z-index: -2;
+  transition: transform 8s ease; /* 2 saniyelik geçiş efekti */
+  transform: scale(1.1); /* Resim üzerine gelindiğinde zoom yap */
 }
 
 .containerBackground::after{
@@ -26,5 +30,19 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Yarı saydam siyah katman */
+  z-index: -1;
 }
 
+ul.list-unstyled li.list-inline-item {
+  font-weight: 700;
+
+}
+ul.list-unstyled li.list-inline-item:hover {
+  color:#C27B00;
+  transition: color 0.5s ease; /* Geçiş efekti */
+  cursor: pointer;
+}
+ul.list-unstyled li.list-inline-item.active {
+  color:#C27B00;
+  transition: color 0.5s ease; /* Geçiş efekti */
+}

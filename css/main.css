@@ -46,3 +46,28 @@ ul.list-unstyled li.list-inline-item.active {
   color:#C27B00;
   transition: color 0.5s ease; /* Geçiş efekti */
 }
+
+/* phone icon */
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #c27b00; /* Arka plan rengi */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle i {
+  font-size: 20px; /* İkon boyutu */
+  color: white; /* İkon rengi */
+}
+
+.half-size {
+  transform: scale(0.7); /* Resmi yarıya indirir */
+  transform-origin: top left; /* Orijin noktasını sol üst köşeye ayarlar */
+}
+
+.border-bottom-menu {
+  box-shadow: 0 1px 0 #ffffff21; /* 0.1 opacity ile daha ince görünecektir */
+}

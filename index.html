@@ -7,24 +7,30 @@
   <title>Building Template</title>
   <!-- Bootstrap CSS -->
   <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css\main.css" rel="stylesheet" type="text/css">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
+  <style>
+    /* Yeni CSS Stilleri */
+    #navBar .half-size {
+      max-width: 200px;
+    }
+  </style>
 </head>
 
-
-
-
 <body>
-  <div class="containerBackground">
-  </div>
-  <!-- menu -->
-  <div id="navBar" class="border-bottom-menu text-center pb-3">
-    <div class="row">
+  <div class="containerBackground"></div>
+
+  <!-- Menü -->
+  <div id="navBar" class="border-bottom-menu text-center pb-3 ps-5">
+    <div class="row align-items-center justify-content-between">
       <!-- Logo -->
-      <img src="img\logoInsaat.png" class="half-size col-2 ps-5 d-flex align-self-center justify-content-center" >
-      <!-- Menu -->
-      <div id="menu" class="col-7 ps-5 d-flex align-self-center justify-content-center">
-        <ul class="list-unstyled">
+      <div class="col-2 d-flex justify-content-start">
+        <img src="img/logoInsaat.png" class="half-size">
+      </div>
+
+      <!-- Menü -->
+      <div id="menu" class="col-7">
+        <ul class="list-unstyled mb-0 d-flex justify-content-around">
           <li class="list-inline-item pe-4 active">Anasayfa</li>
           <li class="list-inline-item pe-4">Kurumsal+</li>
           <li class="list-inline-item pe-4">Hizmetler+</li>
@@ -35,22 +41,27 @@
           <li class="list-inline-item pe-4">İletişim</li>
         </ul>
       </div>
-      <!-- Contact -->
-      <div class="col-3 ps-5 d-flex align-self-center justify-content-center">
-        <div class="row">
-          <div class="col-5 d-flex align-self-center justify-content-end">
-            <div class="circle">
-              <i class="mdi mdi-phone-in-talk"></i>
-            </div>
+      <!-- İletişim -->
+      <div class="col-3">
+        <div class="d-flex align-items-center">
+          <div class="circle me-2">
+            <i class="mdi mdi-phone-in-talk"></i>
           </div>
-          <div class="col-6">
+          <div>
             Müşteri Hizmetleri
+            <br>
             <b>0850 441 89 49</b>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Başlık -->
+  <div class="container d-flex align-items-center justify-content-center" style="height: 350px;">
+    <p class="display-1 fw-bolder">KURUMSAL - MİMARİ V1</p>
+  </div>
+
   <!-- Bootstrap JS ve Bağımlılıkları -->
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>

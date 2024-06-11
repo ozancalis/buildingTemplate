@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +8,7 @@
   <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
-  <style>
-    /* Yeni CSS Stilleri */
-    #navBar .half-size {
-      max-width: 200px;
-    }
-  </style>
 </head>
-
 <body>
   <div class="containerBackground"></div>
 
@@ -31,6 +23,12 @@
       <!-- Menü -->
       <div id="menu" class="col-7">
         <ul class="list-unstyled mb-0 d-flex justify-content-around">
+          <!-- Menü öğelerini döngü ile oluşturma -->
+          <!-- 
+            {% for item in menuItems %}
+              <li class="list-inline-item pe-4 {{ 'active' if item.active }}">{{ item.name }}</li>
+            {% endfor %}
+          -->
           <li class="list-inline-item pe-4 active">Anasayfa</li>
           <li class="list-inline-item pe-4">Kurumsal+</li>
           <li class="list-inline-item pe-4">Hizmetler+</li>
@@ -41,6 +39,7 @@
           <li class="list-inline-item pe-4">İletişim</li>
         </ul>
       </div>
+
       <!-- İletişim -->
       <div class="col-3">
         <div class="d-flex align-items-center">
@@ -65,5 +64,4 @@
   <!-- Bootstrap JS ve Bağımlılıkları -->
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

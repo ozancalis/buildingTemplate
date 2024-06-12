@@ -12,10 +12,25 @@ body {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   height: 200px;
-  width: 50px;
+  width: 30px;
   outline: black;
   background-size: 50%, 100%;
-  background-color: #c27b00;
+  background-color: #c27b006e;
+  transition: background-color 0.5s, width 0.5s;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  top:35%;
+  padding:0;
+  width: 40px;
+  height: 200px;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  width: 50px;
+  background-color: #7a4f03;
+  
 }
 
 #navBar {

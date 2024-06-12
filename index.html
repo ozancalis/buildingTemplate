@@ -1,71 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Building Template</title>
   <!-- Bootstrap CSS -->
-  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet" type="text/css">
-  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/main.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet" />
 </head>
+
 <body>
-  <div class="containerBackground"></div>
-
-  <!-- Menü -->
-  <div id="navBar" class="border-bottom-menu text-center pb-3 ps-5">
-    <div class="row align-items-center justify-content-between">
-      <!-- Logo -->
-      <div class="col-2 d-flex justify-content-start">
-        <img src="img/logoInsaat.png" class="half-size">
-      </div>
-
-      <!-- Menü -->
-      <div id="menu" class="col-7">
-        <ul class="list-unstyled mb-0 d-flex justify-content-around">
-          <!-- Menü öğelerini döngü ile oluşturma -->
-          <!-- 
-            {% for item in menuItems %}
-              <li class="list-inline-item pe-4 {{ 'active' if item.active }}">{{ item.name }}</li>
-            {% endfor %}
-          -->
-          <li class="list-inline-item pe-4 active">Anasayfa</li>
-          <li class="list-inline-item pe-4">Kurumsal+</li>
-          <li class="list-inline-item pe-4">Hizmetler+</li>
-          <li class="list-inline-item pe-4">Projeler+</li>
-          <li class="list-inline-item pe-4">Medya+</li>
-          <li class="list-inline-item pe-4">S.S.S</li>
-          <li class="list-inline-item pe-4">Blog</li>
-          <li class="list-inline-item pe-4">İletişim</li>
-        </ul>
-      </div>
-
-      <!-- İletişim -->
-      <div class="col-3">
-        <div class="d-flex align-items-center">
-          <div class="circle me-2">
-            <i class="mdi mdi-phone-in-talk"></i>
+  <div id="carouselExampleFade" class="carousel slide carousel-fade p-0" data-bs-ride="carousel">
+    <div class="carousel-inner p-0">
+      <div class="carousel-item active">
+        <div class="containerBackground" style="background-image: url('/img/822-ic-mekan-tasarimlari.png');"></div>
+        <div class="navBarMenuFetch"></div>
+        <div class="container d-flex flex-column justify-content-end" style="height: 800px">
+          <div class="display-1 fw-bolder mb-5 p-5">
+            <p>KURUMSAL</p>
+            <p>- MİMARİ V1</p>
           </div>
-          <div>
-            Müşteri Hizmetleri
-            <br>
-            <b>0850 441 89 49</b>
+          <p class="col-9 display-6 fw-bolder">
+            Seo uyumlu şirket teması kolay bir şekilde daha modern, daha düzenli bir şirket sitesi kurmanızı sağlıyor.
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="containerBackground" style="background-image: url('/img/another-image.png');"></div>
+        <div class="navBarMenuFetch"></div>
+        <div class="container d-flex flex-column justify-content-end" style="height: 800px">
+          <div class="display-1 fw-bolder mb-5">
+            <p>KURUMSAL</p>
+            <p>- MİMARİ V2</p>
           </div>
+          <p class="col-9 display-6 fw-bolder">
+            Seo uyumlu şirket teması kolay bir şekilde daha modern, daha düzenli bir şirket sitesi kurmanızı sağlıyor.
+          </p>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Başlık -->
-  <div class="container row d-flex align-items-end" style="height: 600px;">
-    <div class="col-12 display-1 fw-bolder">
-      <p>KURUMSAL</p>
-      <p>- MİMARİ V1</p>
-    </div>
-    <p class="col-6 display-6 fw-bolder">Seo uyumlu şirket teması kolay bir şekilde daha modern, daha düzenli bir şirket sitesi kurmanızı sağlıyor.</p>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 
   <!-- Bootstrap JS ve Bağımlılıkları -->
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/getMenu.js"></script>
 </body>
+
 </html>

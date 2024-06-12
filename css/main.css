@@ -15,22 +15,27 @@ body {
   width: 30px;
   outline: black;
   background-size: 50%, 100%;
-  background-color: #c27b006e;
-  transition: background-color 0.5s, width 0.5s;
+  background-color: hsl(38, 100%, 28%);
 }
+
 .carousel-control-prev,
 .carousel-control-next {
   top:35%;
   padding:0;
   width: 40px;
   height: 200px;
+  transition: background-color 0.5s, width 0.5s;
+  
 }
 
-.carousel-control-prev-icon:hover,
-.carousel-control-next-icon:hover {
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
   width: 50px;
-  background-color: #7a4f03;
-  
+  background-color: hsl(38, 100%, 28%);
+}
+.carousel-control-prev-icon::hover,
+.carousel-control-next-icon::hover {
+  background-color: hsl(38, 100%, 28%);
 }
 
 #navBar {

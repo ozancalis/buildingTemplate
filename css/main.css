@@ -9,6 +9,15 @@ body {
   margin-right: 0;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 200px;
+  width: 50px;
+  outline: black;
+  background-size: 50%, 100%;
+  background-color: #c27b00;
+}
+
 #navBar {
   padding-top: 2%;
 }

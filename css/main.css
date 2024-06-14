@@ -4,6 +4,7 @@ body {
   overflow-x: hidden; /* Yatay kaydırmayı kapatma */
 }
 
+
 .container {
   margin-left: 5%;
   margin-right: 0;
@@ -12,7 +13,7 @@ body {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   height: 200px;
-  width: 30px;
+  width: 50px;
   outline: black;
   background-size: 50%, 100%;
   background-color: hsl(38, 100%, 28%);
@@ -30,7 +31,7 @@ body {
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-  width: 50px;
+  width: 65px;
   background-color: hsl(38, 100%, 28%);
 }
 .carousel-control-prev-icon::hover,

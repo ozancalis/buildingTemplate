@@ -9,14 +9,17 @@
   <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/main.css" rel="stylesheet" type="text/css" />
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+      <!-- Animate.css -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 
 <body>
-  <div id="carouselExampleFade" class="carousel slide carousel-fade p-0" data-bs-interval="false">
-    <div class="carousel-inner p-0">
-      <div class="carousel-item active">
-        <div class="containerBackground" style="background-image: url('/img/822-ic-mekan-tasarimlari.png');"></div>
-        <div class="navBarMenuFetch"></div>
+  <div class="navBarMenuFetch"></div>
+  <div class="owl-carousel owl-theme owl-fade">
+      <div class="item" style="background-image: url('img/822-ic-mekan-tasarimlari.png');">
         <div class="container d-flex flex-column align-items-center justify-content-center" style="height: 800px">
           <div class="col-9 display-1 fw-bolder">
             <p>KURUMSAL</p>
@@ -27,9 +30,7 @@
           </p>
         </div>
       </div>
-      <div class="carousel-item">
-        <div class="containerBackground" style="background-image: url('/img/102-hayallerinizi-insa-ediyoruz.png');"></div>
-        <div class="navBarMenuFetch"></div>
+      <div class="item" style="background-image: url('img/102-hayallerinizi-insa-ediyoruz.png');">
         <div class="container d-flex flex-column align-items-center justify-content-center" style="height: 800px">
           <div class="col-9 display-1 fw-bolder mb-5">
             <p>HAYALLERİNİZİ İNŞA EDİYORUZ</p>
@@ -39,25 +40,49 @@
           </p>
         </div>
       </div>
-    </div>
 
-    
-    <button class="carousel-control-prev d-flex flex-column align-items-start" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next d-flex flex-column align-items-end" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
 
   <!-- Bootstrap JS ve Bağımlılıkları -->
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/getMenu.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        nav: true,
+        dots: false,
+        autoplay: false,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        animateOut: 'fadeOut',
+        stagePadding: true,
+        animateIn: 'fadeIn',
+        onInitialized: zoomInFirstSlide, // İlk slayta zoom efekti
+        onTranslated: resetZoom // Slayt geçişinde zoom efektini sıfırla
+      });
+      
+      function zoomInFirstSlide(event) {
+                // İlk slaytın görseline hafif bir zoom efekti ekleyin
+                var currentItem = $(event.target).find(".owl-item.active .item");
+                currentItem.find("img").css("transform", "scale(1.1)");
+          }
+
+            function resetZoom(event) {
+                // Slayt geçişinde zoom efektini sıfırlayın
+                var currentItem = $(event.target).find(".owl-item.active .item");
+                currentItem.siblings().find("img").css("transform", "scale(1)");
+                currentItem.find("img").css("transform", "scale(1.1)");
+            }
+    });
+
+  </script>
 </body>
 
 </html>
-
-
-

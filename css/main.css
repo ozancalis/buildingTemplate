@@ -3,44 +3,23 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Metin gölgesi */
   overflow-x: hidden; /* Yatay kaydırmayı kapatma */
 }
-
-
 .container {
   margin-left: 5%;
   margin-right: 0;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  height: 200px;
-  width: 50px;
-  outline: black;
-  background-size: 50%, 100%;
-  background-color: hsl(38, 100%, 28%);
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  top:35%;
-  padding:0;
-  width: 40px;
-  height: 200px;
-  transition: background-color 0.5s, width 0.5s;
-  
-}
-
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  width: 65px;
-  background-color: hsl(38, 100%, 28%);
-}
-.carousel-control-prev-icon::hover,
-.carousel-control-next-icon::hover {
-  background-color: hsl(38, 100%, 28%);
-}
-
 #navBar {
   padding-top: 2%;
+}
+
+.navBarMenuFetch {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  z-index: 10;
 }
 
 #navBar .half-size { max-width: 200px; }
@@ -100,4 +79,55 @@ ul.list-unstyled li.list-inline-item.active {
 
 .border-bottom-menu {
   box-shadow: 0 1px 0 #ffffff21; /* Daha ince gölge efekti */
+}
+
+/* owls */
+.owl-carousel .item {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  /* transition: transform 8s ease; 8 saniyelik geçiş efekti */
+  /* transform: scale(1.1); Resim üzerinde zoom yapma */
+}
+
+.owl-carousel .item img {
+  width: 100% !important;
+  height: 100% !important;
+}
+.owl-carousel .item.active img {
+  transition: transform 8s ease; /* 8 saniyelik geçiş efekti */
+  transform: scale(1.1); /* Resim üzerinde zoom yapma */
+}
+
+.owl-carousel .owl-nav button.owl-prev, 
+.owl-carousel .owl-nav button.owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: hsla(38, 100%, 28%, 0.493) !important;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  width: 50px;
+  height: 200px;
+  font-size: 4em !important;
+  font-weight: 100 !important;
+  transition: background 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+.owl-carousel .owl-nav button.owl-prev {
+  left: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+.owl-carousel .owl-nav button.owl-next {
+  right: 0;
+  padding-right: 0;
+  margin-right: 0;
+}
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:hover {
+  background: hsla(38, 100%, 28%, 0.74) !important;
+  width: 75px;
 }

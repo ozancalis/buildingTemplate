@@ -81,6 +81,8 @@ ul.list-unstyled li.list-inline-item.active {
   box-shadow: 0 1px 0 #ffffff21; /* Daha ince gölge efekti */
 }
 
+
+
 /* owls */
 .owl-carousel .item {
   height: 100vh;

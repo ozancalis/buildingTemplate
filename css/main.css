@@ -22,7 +22,7 @@ body {
   z-index: 10;
 }
 
-#navBar .half-size { max-width: 200px; }
+#navBar .half-size { max-width: 100px; }
 
 .containerBackground {
   width: 100%;
@@ -73,16 +73,15 @@ ul.list-unstyled li.list-inline-item.active {
 }
 
 .half-size {
-  transform: scale(0.7); /* Resmi küçültme */
-  transform-origin: top left; /* Orijin noktasını sol üst köşeye ayarlar */
+  transform: scale(0.3); /* Resmi küçültme */
+  transform-origin: left center; /* Orijin noktasını sol üst köşeye ayarlar */
 }
 
 .border-bottom-menu {
   box-shadow: 0 1px 0 #ffffff21; /* Daha ince gölge efekti */
+  padding: 0 ;
+  margin: 0;
 }
-
-
-
 /* owls */
 .owl-carousel .item {
   height: 100vh;

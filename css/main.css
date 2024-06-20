@@ -11,9 +11,16 @@ body {
 #navBar {
   padding-top: 2%;
 }
+.owl-carousel .item {
+  transition: transform 3s ease;
+  transform: scale(1);
+}
 
+.owl-carousel .owl-item.active .item {
+  transform: scale(1.02);
+}
 .navBarMenuFetch {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -23,27 +30,6 @@ body {
 }
 
 #navBar .half-size { max-width: 100px; }
-
-.containerBackground {
-  width: 100%;
-  height: 100vh; /* Tam ekran yüksekliği */
-  position: absolute;
-  background: url('/img/822-ic-mekan-tasarimlari.png') bottom / cover; /* Arka plan resmi, konum ve boyutlandırma */
-  z-index: -2;
-  transition: transform 8s ease; /* 8 saniyelik geçiş efekti */
-  transform: scale(1.1); /* Resim üzerinde zoom yapma */
-}
-
-.containerBackground::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(48, 39, 1, 0.349); /* Yarı saydam siyah katman */
-  z-index: -1;
-}
 
 ul.list-unstyled li.list-inline-item {
   font-weight: 700;
@@ -88,17 +74,11 @@ ul.list-unstyled li.list-inline-item.active {
   width: 100%;
   background-size: cover;
   background-position: center;
-  /* transition: transform 8s ease; 8 saniyelik geçiş efekti */
-  /* transform: scale(1.1); Resim üzerinde zoom yapma */
 }
 
 .owl-carousel .item img {
   width: 100% !important;
   height: 100% !important;
-}
-.owl-carousel .item.active img {
-  transition: transform 8s ease; /* 8 saniyelik geçiş efekti */
-  transform: scale(1.1); /* Resim üzerinde zoom yapma */
 }
 
 .owl-carousel .owl-nav button.owl-prev, 
